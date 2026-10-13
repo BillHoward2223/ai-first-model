@@ -1,0 +1,37 @@
+Step 1 — Check your Ubuntu server
+lsb_release -a
+python3 --version
+free -h
+df -h /
+Step 2 — Install the required packages
+sudo apt update
+sudo apt install -y python3 python3-venv python3-pip
+python3 — runs your AI training program.
+python3-venv — creates an isolated Python environment.
+python3-pip — installs Python libraries.
+Step 3 — Create your AI project
+mkdir -p ~/ai-first-model
+cd ~/ai-first-model
+python3 -m venv .venv
+source .venv/bin/activate
+python --version
+which python
+Step 4 — Install machine-learning libraries
+python -m pip install --upgrade pip
+python -m pip install scikit-learn joblib
+python -c "import sklearn, joblib; print('scikit-learn:', sklearn.__version__); print('Libraries installed successfully')"
+Step 5 — Create your first training program
+nano train.py
+python train.py
+
+
+Step 1 — Check your project
+cd ~/ai-first-model
+source .venv/bin/activate
+ls -lh
+Step 2 — Create the prediction program
+nano predict.py
+Step 3 — Run your AI
+python predict.py
+Step 4 — Understand what's happening
+The key distinction is that prediction does not retrain the model. It simply uses the rules learned during training.
