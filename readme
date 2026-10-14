@@ -35,3 +35,12 @@ Step 3 — Run your AI
 python predict.py
 Step 4 — Understand what's happening
 The key distinction is that prediction does not retrain the model. It simply uses the rules learned during training.
+
+Two ways to improve your existing AI
+Method	                How it works
+Retraining	            Train a model again using old and new data together
+Incremental training	Update a model using new data without starting from scratch
+
+scikit-learn Model
+DecisionTreeClassifier does not support standard incremental training through partial_fit().
+SGDClassifier supports incremental training.
